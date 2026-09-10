@@ -71,7 +71,8 @@ module.exports = async (req, res) => {
         `📦 ${order.product}\n` +
         `💵 Rp${Number(order.price).toLocaleString('id-ID')}\n` +
         `👤 ${order.name}\n` +
-        `📱 ${order.whatsapp}\n\n` +
+        `📱 ${order.whatsapp}\n` +
+        `💌 ${order.email}\n\n` +
         `✅ <b>PAID</b> via Casaku`
       );
     }
