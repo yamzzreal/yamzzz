@@ -1276,6 +1276,13 @@ function normalizeCategory(category) {
 
     }
 
+   if (
+        value.includes("ress")
+    ) {
+
+        return "email-ress";
+
+   }
 
     if (
         value.includes("pt")
@@ -1290,14 +1297,6 @@ function normalizeCategory(category) {
 
 }
 
-   if (
-        value.includes("ress")
-    ) {
-
-        return "email-ress";
-
-   }
-
 /* =========================================================
    CATEGORY NAME
 ========================================================= */
@@ -1309,10 +1308,13 @@ function getCategoryName(category) {
     ) {
 
         case "sewa-jasteb":
-            return "Sewa JASTEB";
+            return "SEWA JASTEB";
 
         case "pt-jasteb":
             return "PT JASTEB";
+
+        case "email-ress":
+            return "EMAIL RESS";
           
         case "jasteb":
         default:
