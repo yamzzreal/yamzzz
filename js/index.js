@@ -1313,9 +1313,6 @@ function getCategoryName(category) {
 
         case "pt-jasteb":
             return "PT JASTEB";
-
-        case "email-ress":
-            return "EMAIL RESS";
           
         case "jasteb":
         default:
