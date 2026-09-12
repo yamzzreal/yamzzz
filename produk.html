@@ -1,6 +1,1093 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"><meta name="theme-color" content="#07111f">
-<title>Produk • Jasteb Yamzz Market</title><meta name="description" content='Yamzz Market • JASTEB Marketplace'>
-<link rel="icon" type="image/png" href="assets/hero.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200" rel="stylesheet">
-<link rel="stylesheet" href="css/index.css"></head><body><div id="loader" class="loader"><div class="loader-box"><div class="loader-spinner"></div><span>Memuat toko...</span></div></div><header class="navbar"><div class="nav-container"><a href="index.html" class="brand"><div class="brand-logo"><img id="navLogo" src="assets/hero.png" alt="Logo"></div><div class="brand-info"><strong id="navStoreName">Yamzz Market</strong><span>JASTEB STORE</span></div></a><div class="nav-actions"><a id="navWhatsapp" href="#" target="_blank" rel="noopener" class="nav-wa"><span class="material-symbols-rounded">chat</span><span>WhatsApp</span></a></div></div></header><main class="page-main"><section class="container page-heading"><span class="section-label"><span class="material-symbols-rounded">inventory_2</span> MARKETPLACE</span><h1>Produk Yamzz Market</h1><p>Cari produk JASTEB, pilih kategori, lalu lakukan order dengan mudah.</p><div class="search-box"><span class="material-symbols-rounded">search</span><input id="productSearch" type="search" placeholder="Cari nama produk..." autocomplete="off"><button id="clearSearch" class="search-clear" type="button"><span class="material-symbols-rounded">close</span></button></div><div class="section-heading"><div><h2>Kategori</h2><p>Filter produk berdasarkan kategori.</p></div><div class="product-count"><span class="material-symbols-rounded">inventory_2</span><span id="productCount">0 Produk</span></div></div><div class="dynamic-categories categories"><button type="button" class="category-btn active" data-category="all"><span class="material-symbols-rounded">apps</span>Semua</button><button type="button" class="category-btn" data-category="jasteb"><span class="material-symbols-rounded">bolt</span>JASTEB</button><button type="button" class="category-btn" data-category="sewa-jasteb"><span class="material-symbols-rounded">key</span>Sewa JASTEB</button><button type="button" class="category-btn" data-category="pt-jasteb"><span class="material-symbols-rounded">workspace_premium</span>PT JASTEB</button><button type="button" class="category-btn" data-category="email-ress"><span class="material-symbols-rounded">mark_email_unread</span>EMAIL RESS</button></div></section><section class="container products-section" style="padding-top:10px"><div id="productsContainer" class="products-grid"></div><div id="emptyProducts" class="empty-state" style="display:none"><div class="empty-icon"><span class="material-symbols-rounded">inventory_2</span></div><h3>Produk Tidak Ditemukan</h3><p>Coba kata kunci atau kategori lain.</p></div></section></main><footer class="footer page-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo"><div class="brand-logo"><img id="footerLogo" src="assets/hero.png" alt="Logo"></div><strong id="footerStoreName">Yamzz Market</strong></div><p id="footerDescription">JASTEB Marketplace terpercaya dengan pelayanan cepat dan aman.</p><div class="social-links"><a id="socialTiktok" href="#" target="_blank" aria-label="TikTok"><span class="material-symbols-rounded">music_note</span></a><a id="socialInstagram" href="#" target="_blank" aria-label="Instagram"><span class="material-symbols-rounded">photo_camera</span></a><a id="socialYoutube" href="#" target="_blank" aria-label="YouTube"><span class="material-symbols-rounded">smart_display</span></a><a id="socialTelegram" href="#" target="_blank" aria-label="Telegram"><span class="material-symbols-rounded">send</span></a></div></div><div class="footer-column"><h4>Navigasi</h4><a href="index.html"><span class="material-symbols-rounded">home</span> Home</a><a href="produk.html"><span class="material-symbols-rounded">inventory_2</span> Produk</a><a href="tentang.html"><span class="material-symbols-rounded">info</span> Tentang</a></div><div class="footer-column"><h4>Layanan</h4><a href="produk.html"><span class="material-symbols-rounded">bolt</span> JASTEB</a><a href="produk.html"><span class="material-symbols-rounded">key</span> Sewa JASTEB</a><a href="produk.html"><span class="material-symbols-rounded">workspace_premium</span> PT JASTEB</a></div><div class="footer-column"><h4>Kontak</h4><a id="footerWhatsapp" href="#" target="_blank"><span class="material-symbols-rounded">chat</span> WhatsApp CS</a><a id="footerEmail" href="#"><span class="material-symbols-rounded">mail</span> Email CS</a></div></div><div class="footer-bottom"><span>© <span id="footerYear"></span> <span id="copyrightName">Yamzz Market</span></span><span>All Rights Reserved.</span></div></div></footer><nav class="bottom-navbar" aria-label="Navigasi utama"><a href="produk.html" data-page="produk"><span class="material-symbols-rounded">inventory_2</span><span>Produk</span></a><a href="index.html" data-page="home"><span class="material-symbols-rounded">home</span><span>Home</span></a><a href="tentang.html" data-page="tentang"><span class="material-symbols-rounded">info</span><span>Tentang</span></a></nav><div id="toast" class="toast"><div class="toast-icon"><span class="material-symbols-rounded">check</span></div><div class="toast-content"><strong id="toastTitle">Berhasil</strong><span id="toastMessage">Berhasil melakukan aksi.</span></div></div><div id="productModal" class="modal" aria-hidden="true"><div class="modal-overlay"></div><div class="modal-content"><button type="button" id="closeModal" class="modal-close"><span class="material-symbols-rounded">close</span></button><div id="modalProductImage" class="modal-product-image"><img src="" alt="Produk" id="modalImage"></div><div class="modal-product-info"><span id="modalCategory" class="product-category">JASTEB</span><h2 id="modalProductName">Nama Produk</h2><p id="modalProductDescription">Deskripsi produk.</p><div class="modal-price"><span>Harga</span><strong id="modalPrice">Rp0</strong></div><button type="button" id="modalBuyButton" class="btn btn-primary btn-full"><span class="material-symbols-rounded">shopping_cart</span>Beli Sekarang</button></div></div></div><script src="js/index.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.bottom-navbar a').forEach(a=>a.classList.toggle('active',a.dataset.page==='produk'));});</script></body></html>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
+>
+
+<meta
+    name="theme-color"
+    content="#07111f"
+>
+
+<title>
+    Produk • Jasteb Yamzz Market
+</title>
+
+<meta
+    name="description"
+    content="Yamzz Market • JASTEB Marketplace"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="assets/hero.png"
+>
+
+
+<!-- GOOGLE FONTS -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+>
+
+
+<!-- FONT AWESOME -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+
+<!-- CSS -->
+
+<link
+    rel="stylesheet"
+    href="css/index.css"
+>
+
+
+<style>
+
+/* =========================================
+   FONT AWESOME
+========================================= */
+
+.fa-solid,
+.fa-brands {
+    line-height: 1;
+}
+
+
+/* =========================================
+   ICON SPACING
+========================================= */
+
+.nav-wa i,
+.section-label i,
+.search-box > i,
+.search-clear i,
+.product-count i,
+.category-btn i,
+.empty-icon i,
+.social-links i,
+.footer-column i,
+.bottom-navbar i,
+.toast-icon i,
+.modal-close i,
+.btn i {
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-box > i {
+    pointer-events: none;
+}
+
+
+/* =========================================
+   SOCIAL ICON
+========================================= */
+
+.social-links i {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.fa-whatsapp {
+    font-size: 20px;
+}
+
+
+/* =========================================
+   MODAL CLOSE
+========================================= */
+
+.modal-close i {
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+.category-btn i {
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PRODUCT COUNT
+========================================= */
+
+.product-count i {
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   EMPTY ICON
+========================================= */
+
+.empty-icon i {
+    font-size: 32px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     LOADER
+========================================= -->
+
+<div
+    id="loader"
+    class="loader"
+>
+
+    <div class="loader-box">
+
+        <div class="loader-spinner"></div>
+
+        <span>
+            Memuat toko...
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+
+                <img
+                    id="navLogo"
+                    src="assets/hero.png"
+                    alt="Logo"
+                >
+
+            </div>
+
+
+            <div class="brand-info">
+
+                <strong id="navStoreName">
+                    Yamzz Market
+                </strong>
+
+                <span>
+                    JASTEB STORE
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- NAV ACTION -->
+
+        <div class="nav-actions">
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                id="navWhatsapp"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="nav-wa"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                    WhatsApp
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="page-main">
+
+
+<!-- =========================================
+     PAGE HEADING
+========================================= -->
+
+<section class="container page-heading">
+
+
+    <!-- LABEL -->
+
+    <span class="section-label">
+
+        <i class="fa-solid fa-box-open"></i>
+
+        MARKETPLACE
+
+    </span>
+
+
+
+    <!-- TITLE -->
+
+    <h1>
+        Produk Yamzz Market
+    </h1>
+
+
+
+    <!-- DESCRIPTION -->
+
+    <p>
+
+        Cari produk JASTEB, pilih kategori,
+        lalu lakukan order dengan mudah.
+
+    </p>
+
+
+
+    <!-- =====================================
+         SEARCH
+    ====================================== -->
+
+    <div class="search-box">
+
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+        <input
+            id="productSearch"
+            type="search"
+            placeholder="Cari nama produk..."
+            autocomplete="off"
+        >
+
+
+        <button
+            id="clearSearch"
+            class="search-clear"
+            type="button"
+            aria-label="Hapus pencarian"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         CATEGORY HEADING
+    ====================================== -->
+
+    <div class="section-heading">
+
+
+        <div>
+
+            <h2>
+                Kategori
+            </h2>
+
+            <p>
+                Filter produk berdasarkan kategori.
+            </p>
+
+        </div>
+
+
+
+        <!-- PRODUCT COUNT -->
+
+        <div class="product-count">
+
+            <i class="fa-solid fa-box"></i>
+
+            <span id="productCount">
+                0 Produk
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         CATEGORIES
+    ====================================== -->
+
+    <div
+        class="dynamic-categories categories"
+    >
+
+
+        <!-- SEMUA -->
+
+        <button
+            type="button"
+            class="category-btn active"
+            data-category="all"
+        >
+
+            <i class="fa-solid fa-border-all"></i>
+
+            Semua
+
+        </button>
+
+
+
+        <!-- JASTEB -->
+
+        <button
+            type="button"
+            class="category-btn"
+            data-category="jasteb"
+        >
+
+            <i class="fa-solid fa-bolt"></i>
+
+            JASTEB
+
+        </button>
+
+
+
+        <!-- SEWA JASTEB -->
+
+        <button
+            type="button"
+            class="category-btn"
+            data-category="sewa-jasteb"
+        >
+
+            <i class="fa-solid fa-key"></i>
+
+            Sewa JASTEB
+
+        </button>
+
+
+
+        <!-- PT JASTEB -->
+
+        <button
+            type="button"
+            class="category-btn"
+            data-category="pt-jasteb"
+        >
+
+            <i class="fa-solid fa-crown"></i>
+
+            PT JASTEB
+
+        </button>
+
+
+
+        <!-- EMAIL RESS -->
+
+        <button
+            type="button"
+            class="category-btn"
+            data-category="email-ress"
+        >
+
+            <i class="fa-solid fa-envelope-open-text"></i>
+
+            EMAIL RESS
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
+<section
+    class="container products-section"
+    style="padding-top:10px"
+>
+
+
+    <!-- PRODUCT CONTAINER -->
+
+    <div
+        id="productsContainer"
+        class="products-grid"
+    ></div>
+
+
+
+    <!-- EMPTY STATE -->
+
+    <div
+        id="emptyProducts"
+        class="empty-state"
+        style="display:none"
+    >
+
+        <div class="empty-icon">
+
+            <i class="fa-solid fa-box-open"></i>
+
+        </div>
+
+
+        <h3>
+            Produk Tidak Ditemukan
+        </h3>
+
+
+        <p>
+            Coba kata kunci atau kategori lain.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer page-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <!-- =================================
+                 FOOTER BRAND
+            ================================== -->
+
+            <div class="footer-brand">
+
+
+                <div class="footer-logo">
+
+
+                    <div class="brand-logo">
+
+                        <img
+                            id="footerLogo"
+                            src="assets/hero.png"
+                            alt="Logo"
+                        >
+
+                    </div>
+
+
+                    <strong id="footerStoreName">
+                        Yamzz Market
+                    </strong>
+
+
+                </div>
+
+
+
+                <p id="footerDescription">
+
+                    JASTEB Marketplace terpercaya
+                    dengan pelayanan cepat dan aman.
+
+                </p>
+
+
+
+                <!-- SOCIAL -->
+
+                <div class="social-links">
+
+
+                    <!-- TIKTOK -->
+
+                    <a
+                        id="socialTiktok"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="TikTok"
+                    >
+
+                        <i class="fa-brands fa-tiktok"></i>
+
+                    </a>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        id="socialInstagram"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
+                    >
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+
+                    <!-- YOUTUBE -->
+
+                    <a
+                        id="socialYoutube"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="YouTube"
+                    >
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+
+                    <!-- TELEGRAM -->
+
+                    <a
+                        id="socialTelegram"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Telegram"
+                    >
+
+                        <i class="fa-brands fa-telegram"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 NAVIGASI
+            ================================== -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Navigasi
+                </h4>
+
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Home
+
+                </a>
+
+
+                <a href="produk.html">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    Produk
+
+                </a>
+
+
+                <a href="tentang.html">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Tentang
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 LAYANAN
+            ================================== -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Layanan
+                </h4>
+
+
+                <a href="produk.html">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    JASTEB
+
+                </a>
+
+
+                <a href="produk.html">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    Sewa JASTEB
+
+                </a>
+
+
+                <a href="produk.html">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                    PT JASTEB
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 KONTAK
+            ================================== -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Kontak
+                </h4>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    id="footerWhatsapp"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp CS
+
+                </a>
+
+
+
+                <!-- EMAIL -->
+
+                <a
+                    id="footerEmail"
+                    href="#"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Email CS
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             FOOTER BOTTOM
+        ====================================== -->
+
+        <div class="footer-bottom">
+
+
+            <span>
+
+                ©
+
+                <span id="footerYear"></span>
+
+                <span id="copyrightName">
+                    Yamzz Market
+                </span>
+
+            </span>
+
+
+            <span>
+                All Rights Reserved.
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     BOTTOM NAVBAR
+========================================= -->
+
+<nav
+    class="bottom-navbar"
+    aria-label="Navigasi utama"
+>
+
+
+    <!-- PRODUK -->
+
+    <a
+        href="produk.html"
+        data-page="produk"
+    >
+
+        <i class="fa-solid fa-box"></i>
+
+        <span>
+            Produk
+        </span>
+
+    </a>
+
+
+
+    <!-- HOME -->
+
+    <a
+        href="index.html"
+        data-page="home"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            Home
+        </span>
+
+    </a>
+
+
+
+    <!-- TENTANG -->
+
+    <a
+        href="tentang.html"
+        data-page="tentang"
+    >
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <span>
+            Tentang
+        </span>
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div
+    id="toast"
+    class="toast"
+>
+
+
+    <div class="toast-icon">
+
+        <i class="fa-solid fa-check"></i>
+
+    </div>
+
+
+
+    <div class="toast-content">
+
+
+        <strong id="toastTitle">
+            Berhasil
+        </strong>
+
+
+        <span id="toastMessage">
+            Berhasil melakukan aksi.
+        </span>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     PRODUCT MODAL
+========================================= -->
+
+<div
+    id="productModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+
+    <!-- OVERLAY -->
+
+    <div class="modal-overlay"></div>
+
+
+
+    <!-- MODAL CONTENT -->
+
+    <div class="modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            type="button"
+            id="closeModal"
+            class="modal-close"
+            aria-label="Tutup"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- PRODUCT IMAGE -->
+
+        <div
+            id="modalProductImage"
+            class="modal-product-image"
+        >
+
+            <img
+                src=""
+                alt="Produk"
+                id="modalImage"
+            >
+
+        </div>
+
+
+
+        <!-- PRODUCT INFO -->
+
+        <div class="modal-product-info">
+
+
+            <!-- CATEGORY -->
+
+            <span
+                id="modalCategory"
+                class="product-category"
+            >
+                JASTEB
+            </span>
+
+
+
+            <!-- NAME -->
+
+            <h2 id="modalProductName">
+                Nama Produk
+            </h2>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <p id="modalProductDescription">
+                Deskripsi produk.
+            </p>
+
+
+
+            <!-- PRICE -->
+
+            <div class="modal-price">
+
+                <span>
+                    Harga
+                </span>
+
+
+                <strong id="modalPrice">
+                    Rp0
+                </strong>
+
+            </div>
+
+
+
+            <!-- BUY BUTTON -->
+
+            <button
+                type="button"
+                id="modalBuyButton"
+                class="btn btn-primary btn-full"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Beli Sekarang
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="js/index.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+        document
+            .querySelectorAll('.bottom-navbar a')
+            .forEach(a => {
+
+                a.classList.toggle(
+                    'active',
+                    a.dataset.page === 'produk'
+                );
+
+            });
+
+    }
+);
+
+</script>
+
+
+</body>
+  </html>
