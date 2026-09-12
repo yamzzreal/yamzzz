@@ -16,135 +16,250 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- Font Awesome untuk ikon WhatsApp -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <link rel="stylesheet" href="css/index.css">
 
 <style>
-/* Ikon WhatsApp */
+
+/* ================================
+   FONT AWESOME ICON
+================================ */
+
+.fa-solid,
+.fa-brands {
+    line-height: 1;
+}
+
+/* WhatsApp */
 .fa-whatsapp {
     font-size: 20px;
 }
 
-/* Menyesuaikan ikon WhatsApp di tombol */
 .nav-wa .fa-whatsapp,
 .btn-secondary .fa-whatsapp,
 #footerWhatsapp .fa-whatsapp {
     line-height: 1;
 }
+
+/* Icon umum */
+.hero-buttons i,
+.banner-content i,
+.marquee i,
+.section-label i,
+.stat-icon i,
+.guide-button i,
+.social-links i,
+.footer-column i,
+.bottom-navbar i,
+.toast-icon i {
+    flex-shrink: 0;
+}
+
+/* Guide arrow */
+.guide-button .arrow {
+    transition: transform .3s ease;
+}
+
+.guide-item.active .guide-button .arrow {
+    transform: rotate(180deg);
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- LOADER -->
+
+<!-- =========================================
+     LOADER
+========================================= -->
+
 <div id="loader" class="loader">
+
     <div class="loader-box">
+
         <div class="loader-spinner"></div>
-        <span>Memuat toko...</span>
+
+        <span>
+            Memuat toko...
+        </span>
+
     </div>
+
 </div>
 
 
-<!-- NAVBAR -->
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
 <header class="navbar">
+
     <div class="nav-container">
+
+
+        <!-- BRAND -->
 
         <a href="index.html" class="brand">
 
             <div class="brand-logo">
-                <img id="navLogo" src="assets/hero.png" alt="Logo">
+
+                <img
+                    id="navLogo"
+                    src="assets/hero.png"
+                    alt="Logo"
+                >
+
             </div>
 
+
             <div class="brand-info">
-                <strong id="navStoreName">Yamzz Market</strong>
-                <span>JASTEB STORE</span>
+
+                <strong id="navStoreName">
+                    Yamzz Market
+                </strong>
+
+                <span>
+                    JASTEB STORE
+                </span>
+
             </div>
 
         </a>
 
 
+
+        <!-- NAV ACTIONS -->
+
         <div class="nav-actions">
 
             <!-- WHATSAPP -->
-            <a id="navWhatsapp"
-               href="#"
-               target="_blank"
-               rel="noopener"
-               class="nav-wa">
+
+            <a
+                id="navWhatsapp"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="nav-wa"
+            >
 
                 <i class="fa-brands fa-whatsapp"></i>
 
-                <span>WhatsApp</span>
+                <span>
+                    WhatsApp
+                </span>
 
             </a>
 
         </div>
 
+
     </div>
+
 </header>
+
 
 
 <main class="page-main">
 
 
-<!-- HERO -->
+<!-- =========================================
+     HERO
+========================================= -->
+
 <section class="hero">
 
     <div class="hero-container">
 
+
+        <!-- HERO CONTENT -->
+
         <div class="hero-content">
 
+
             <div class="hero-badge">
+
                 <span class="badge-dot"></span>
-                <span id="heroTagline">JASTEB TERPERCAYA</span>
+
+                <span id="heroTagline">
+                    JASTEB TERPERCAYA
+                </span>
+
             </div>
 
 
+
             <h1 id="heroTitle">
-                JASTEB <span>Yamzz Market</span>
+
+                JASTEB
+                <span>
+                    Yamzz Market
+                </span>
+
             </h1>
 
 
+
             <p id="heroDescription">
-                Tempat jual beli JASTEB dengan proses cepat, aman dan terpercaya.
+
+                Tempat jual beli JASTEB dengan proses cepat,
+                aman dan terpercaya.
+
             </p>
 
 
+
+            <!-- HERO BUTTONS -->
+
             <div class="hero-buttons">
 
-                <a href="produk.html" class="btn btn-primary">
 
-                    <span class="material-symbols-rounded">
-                        shopping_cart
-                    </span>
+                <!-- PRODUK -->
+
+                <a
+                    href="produk.html"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
 
                     Lihat Produk
 
                 </a>
 
 
-                <a href="cek-transaksi.html" class="btn btn-primary">
 
-                    <span class="material-symbols-rounded">
-                        search
-                    </span>
+                <!-- CEK TRANSAKSI -->
+
+                <a
+                    href="cek-transaksi.html"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
                     Lacak Transaksi
 
                 </a>
 
 
-                <!-- WHATSAPP CS -->
-                <a id="heroWhatsapp"
-                   href="#"
-                   target="_blank"
-                   rel="noopener"
-                   class="btn btn-secondary">
+
+                <!-- WHATSAPP -->
+
+                <a
+                    id="heroWhatsapp"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-secondary"
+                >
 
                     <i class="fa-brands fa-whatsapp"></i>
 
@@ -152,42 +267,61 @@
 
                 </a>
 
+
             </div>
+
 
         </div>
 
+
+
+        <!-- HERO VISUAL -->
 
         <div class="hero-visual">
 
             <div class="hero-glow"></div>
 
+
             <div class="hero-card">
+
+
+                <!-- HERO CARD TOP -->
 
                 <div class="hero-card-top">
 
                     <span class="online-dot"></span>
 
-                    <span>YAMZZ MARKET</span>
-
-                    <span class="material-symbols-rounded">
-                        more_horiz
+                    <span>
+                        YAMZZ MARKET
                     </span>
+
+                    <i class="fa-solid fa-ellipsis"></i>
 
                 </div>
 
+
+
+                <!-- HERO CARD LOGO -->
 
                 <div class="hero-card-logo">
 
-                    <img id="heroLogo"
-                         src="assets/hero.png"
-                         alt="Yamzz Market">
+                    <img
+                        id="heroLogo"
+                        src="assets/hero.png"
+                        alt="Yamzz Market"
+                    >
 
                 </div>
 
 
+
+                <!-- HERO CARD TEXT -->
+
                 <div class="hero-card-text">
 
-                    <strong>JASTEB MARKET</strong>
+                    <strong>
+                        JASTEB MARKET
+                    </strong>
 
                     <span>
                         Cepat • Aman • Terpercaya
@@ -196,65 +330,78 @@
                 </div>
 
 
+
+                <!-- HERO CARD BOTTOM -->
+
                 <div class="hero-card-bottom">
+
 
                     <div>
 
-                        <span class="material-symbols-rounded">
-                            verified
-                        </span>
+                        <i class="fa-solid fa-circle-check"></i>
 
                         Verified Store
 
                     </div>
 
 
+
                     <div>
 
-                        <span class="material-symbols-rounded">
-                            bolt
-                        </span>
+                        <i class="fa-solid fa-bolt"></i>
 
                         Fast Response
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- BANNER -->
+
+<!-- =========================================
+     BANNER
+========================================= -->
+
 <section class="banner-section">
 
     <div class="container">
 
         <div class="banner-card">
 
-            <img id="storeBanner"
-                 src="assets/hero.png"
-                 alt="Yamzz Market Banner">
+
+            <img
+                id="storeBanner"
+                src="assets/hero.png"
+                alt="Yamzz Market Banner"
+            >
+
 
             <div class="banner-overlay"></div>
 
 
+
             <div class="banner-content">
+
 
                 <span class="banner-label">
 
-                    <span class="material-symbols-rounded">
-                        star
-                    </span>
+                    <i class="fa-solid fa-star"></i>
 
                     YAMZZ MARKET
 
                 </span>
+
 
 
                 <h2 id="bannerTitle">
@@ -262,22 +409,30 @@
                 </h2>
 
 
+
                 <p id="bannerDescription">
-                    Pilih produk yang kamu butuhkan dan lakukan pembelian dengan mudah.
+
+                    Pilih produk yang kamu butuhkan
+                    dan lakukan pembelian dengan mudah.
+
                 </p>
 
 
-                <a href="produk.html" class="btn btn-primary">
 
-                    <span class="material-symbols-rounded">
-                        arrow_downward
-                    </span>
+                <a
+                    href="produk.html"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fa-solid fa-arrow-down"></i>
 
                     Lihat Produk
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -286,18 +441,24 @@
 </section>
 
 
-<!-- DASHBOARD -->
+
+<!-- =========================================
+     DASHBOARD
+========================================= -->
+
 <section class="container">
+
+
+    <!-- MARQUEE -->
 
     <div class="marquee-wrap">
 
         <div class="marquee">
 
+
             <span>
 
-                <span class="material-symbols-rounded">
-                    campaign
-                </span>
+                <i class="fa-solid fa-bullhorn"></i>
 
                 <b id="tickerText">
                     Selamat datang di Yamzz Market
@@ -306,22 +467,20 @@
             </span>
 
 
+
             <span>
 
-                <span class="material-symbols-rounded">
-                    verified
-                </span>
+                <i class="fa-solid fa-circle-check"></i>
 
                 Transaksi mudah • cepat • aman
 
             </span>
 
 
+
             <span>
 
-                <span class="material-symbols-rounded">
-                    campaign
-                </span>
+                <i class="fa-solid fa-bullhorn"></i>
 
                 <b>
                     Selamat datang di Yamzz Market
@@ -330,34 +489,37 @@
             </span>
 
 
+
             <span>
 
-                <span class="material-symbols-rounded">
-                    verified
-                </span>
+                <i class="fa-solid fa-circle-check"></i>
 
                 Transaksi mudah • cepat • aman
 
             </span>
+
 
         </div>
 
     </div>
 
 
+
+    <!-- SECTION HEADING -->
+
     <div class="section-heading">
 
         <div>
 
+
             <span class="section-label">
 
-                <span class="material-symbols-rounded">
-                    analytics
-                </span>
+                <i class="fa-solid fa-chart-column"></i>
 
                 DASHBOARD
 
             </span>
+
 
 
             <h2>
@@ -365,31 +527,38 @@
             </h2>
 
 
+
             <p>
                 Ringkasan informasi marketplace Yamzz Market.
             </p>
+
 
         </div>
 
     </div>
 
 
+
+    <!-- STATS -->
+
     <div id="homeStats" class="stats-grid">
 
+
+        <!-- TOTAL PRODUK -->
 
         <div class="stat-card">
 
             <div class="stat-icon">
 
-                <span class="material-symbols-rounded">
-                    inventory_2
-                </span>
+                <i class="fa-solid fa-box"></i>
 
             </div>
+
 
             <strong id="homeTotalProducts">
                 0
             </strong>
+
 
             <span>
                 Total Produk
@@ -398,19 +567,22 @@
         </div>
 
 
+
+        <!-- TOTAL STOK -->
+
         <div class="stat-card">
 
             <div class="stat-icon">
 
-                <span class="material-symbols-rounded">
-                    layers
-                </span>
+                <i class="fa-solid fa-layer-group"></i>
 
             </div>
+
 
             <strong id="homeTotalStock">
                 0
             </strong>
+
 
             <span>
                 Total Stok
@@ -419,19 +591,22 @@
         </div>
 
 
+
+        <!-- KATEGORI -->
+
         <div class="stat-card">
 
             <div class="stat-icon">
 
-                <span class="material-symbols-rounded">
-                    category
-                </span>
+                <i class="fa-solid fa-tags"></i>
 
             </div>
+
 
             <strong id="homeTotalCategories">
                 0
             </strong>
+
 
             <span>
                 Kategori
@@ -440,19 +615,22 @@
         </div>
 
 
+
+        <!-- TRANSAKSI -->
+
         <div class="stat-card">
 
             <div class="stat-icon">
 
-                <span class="material-symbols-rounded">
-                    receipt_long
-                </span>
+                <i class="fa-solid fa-receipt"></i>
 
             </div>
+
 
             <strong id="homeTotalOrders">
                 0
             </strong>
+
 
             <span>
                 Total Transaksi
@@ -460,29 +638,38 @@
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-<!-- PANDUAN -->
+
+<!-- =========================================
+     PANDUAN
+========================================= -->
+
 <section class="guide-section">
 
     <div class="container">
+
+
+        <!-- HEADING -->
 
         <div class="section-heading">
 
             <div>
 
+
                 <span class="section-label">
 
-                    <span class="material-symbols-rounded">
-                        menu_book
-                    </span>
+                    <i class="fa-solid fa-book-open"></i>
 
                     PANDUAN
 
                 </span>
+
 
 
                 <h2>
@@ -490,17 +677,24 @@
                 </h2>
 
 
+
                 <p>
                     Klik panduan untuk melihat langkah-langkahnya.
                 </p>
+
 
             </div>
 
         </div>
 
 
+
+        <!-- GUIDE LIST -->
+
         <div class="guide-list">
 
+
+            <!-- 01 -->
 
             <div class="guide-item">
 
@@ -510,13 +704,13 @@
                         01
                     </span>
 
+
                     <span>
                         Cara Melakukan Order
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -526,7 +720,13 @@
                     <div>
 
                         <p>
-                            Pilih produk di halaman Produk, gunakan pencarian atau kategori, buka detail produk, periksa harga dan stok, lalu tekan Beli Sekarang dan ikuti proses pembayaran.
+
+                            Pilih produk di halaman Produk,
+                            gunakan pencarian atau kategori,
+                            buka detail produk, periksa harga
+                            dan stok, lalu tekan Beli Sekarang
+                            dan ikuti proses pembayaran.
+
                         </p>
 
                     </div>
@@ -535,6 +735,9 @@
 
             </div>
 
+
+
+            <!-- 02 -->
 
             <div class="guide-item">
 
@@ -544,13 +747,13 @@
                         02
                     </span>
 
+
                     <span>
                         Cara Cek Transaksi
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -560,7 +763,12 @@
                     <div>
 
                         <p>
-                            Buka halaman Cek Transaksi, masukkan username atau data transaksi sesuai instruksi, kemudian tekan tombol cek untuk melihat status terbaru.
+
+                            Buka halaman Cek Transaksi,
+                            masukkan username atau data transaksi
+                            sesuai instruksi, kemudian tekan tombol
+                            cek untuk melihat status terbaru.
+
                         </p>
 
                     </div>
@@ -569,6 +777,9 @@
 
             </div>
 
+
+
+            <!-- 03 -->
 
             <div class="guide-item">
 
@@ -578,13 +789,13 @@
                         03
                     </span>
 
+
                     <span>
                         Cara Dapatkan ID Transaksi
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -594,7 +805,12 @@
                     <div>
 
                         <p>
-                            ID transaksi diberikan setelah order berhasil dibuat. Simpan ID tersebut untuk melacak status transaksi dan saat menghubungi Customer Service.
+
+                            ID transaksi diberikan setelah order
+                            berhasil dibuat. Simpan ID tersebut
+                            untuk melacak status transaksi dan
+                            saat menghubungi Customer Service.
+
                         </p>
 
                     </div>
@@ -603,6 +819,9 @@
 
             </div>
 
+
+
+            <!-- 04 -->
 
             <div class="guide-item">
 
@@ -612,13 +831,13 @@
                         04
                     </span>
 
+
                     <span>
                         Cara Melaporkan Masalah Transaksi
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -628,7 +847,11 @@
                     <div>
 
                         <p>
-                            Siapkan ID transaksi dan jelaskan kendala. Hubungi CS melalui WhatsApp atau email resmi agar transaksi dapat diperiksa.
+
+                            Siapkan ID transaksi dan jelaskan kendala.
+                            Hubungi CS melalui WhatsApp atau email resmi
+                            agar transaksi dapat diperiksa.
+
                         </p>
 
                     </div>
@@ -637,6 +860,9 @@
 
             </div>
 
+
+
+            <!-- 05 -->
 
             <div class="guide-item">
 
@@ -646,13 +872,13 @@
                         05
                     </span>
 
+
                     <span>
                         Apa itu Jasteb?
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -662,7 +888,10 @@
                     <div>
 
                         <p>
-                            JASTEB adalah data akun google atau facebook yang belum di cek.
+
+                            JASTEB adalah data akun google
+                            atau facebook yang belum di cek.
+
                         </p>
 
                     </div>
@@ -671,6 +900,9 @@
 
             </div>
 
+
+
+            <!-- 06 -->
 
             <div class="guide-item">
 
@@ -680,13 +912,13 @@
                         06
                     </span>
 
+
                     <span>
                         Apa itu sewa jasteb?
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -696,7 +928,10 @@
                     <div>
 
                         <p>
-                            SEWA PANEL adalah kalian sewa panel jasteb sehingga kalian bisa gacha sepuasnya.
+
+                            SEWA PANEL adalah kalian sewa panel
+                            jasteb sehingga kalian bisa gacha sepuasnya.
+
                         </p>
 
                     </div>
@@ -705,6 +940,9 @@
 
             </div>
 
+
+
+            <!-- 07 -->
 
             <div class="guide-item">
 
@@ -714,13 +952,13 @@
                         07
                     </span>
 
+
                     <span>
                         Apa itu Email Ress?
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -730,7 +968,11 @@
                     <div>
 
                         <p>
-                            EMAIL RESS adalah email yang isinya sudah ada jasteb nya yang belum di cek sama sekali.
+
+                            EMAIL RESS adalah email yang isinya
+                            sudah ada jasteb nya yang belum di cek
+                            sama sekali.
+
                         </p>
 
                     </div>
@@ -740,6 +982,9 @@
             </div>
 
 
+
+            <!-- 08 -->
+
             <div class="guide-item">
 
                 <button class="guide-button">
@@ -748,13 +993,13 @@
                         08
                     </span>
 
+
                     <span>
                         Pembayaran via apa?
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -774,6 +1019,9 @@
             </div>
 
 
+
+            <!-- 09 -->
+
             <div class="guide-item">
 
                 <button class="guide-button">
@@ -782,13 +1030,13 @@
                         09
                     </span>
 
+
                     <span>
                         Tentang Keamanan Transaksi
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -798,7 +1046,12 @@
                     <div>
 
                         <p>
-                            Pastikan transaksi dilakukan melalui website resmi. Jangan membagikan password, OTP, kode pembayaran, atau informasi rahasia. Simpan bukti pembayaran dan ID transaksi.
+
+                            Pastikan transaksi dilakukan melalui
+                            website resmi. Jangan membagikan password,
+                            OTP, kode pembayaran, atau informasi rahasia.
+                            Simpan bukti pembayaran dan ID transaksi.
+
                         </p>
 
                     </div>
@@ -808,6 +1061,9 @@
             </div>
 
 
+
+            <!-- 10 -->
+
             <div class="guide-item">
 
                 <button class="guide-button">
@@ -816,13 +1072,13 @@
                         10
                     </span>
 
+
                     <span>
                         Panduan Lainnya
                     </span>
 
-                    <span class="material-symbols-rounded arrow">
-                        expand_more
-                    </span>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
 
                 </button>
 
@@ -832,7 +1088,12 @@
                     <div>
 
                         <p>
-                            Untuk pertanyaan lain mengenai produk, pembayaran, atau layanan, silakan hubungi Customer Service melalui kontak resmi di halaman Tentang.
+
+                            Untuk pertanyaan lain mengenai produk,
+                            pembayaran, atau layanan, silakan hubungi
+                            Customer Service melalui kontak resmi
+                            di halaman Tentang.
+
                         </p>
 
                     </div>
@@ -848,10 +1109,15 @@
 
 </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer class="footer page-footer">
 
     <div class="container">
@@ -859,144 +1125,214 @@
         <div class="footer-grid">
 
 
+            <!-- FOOTER BRAND -->
+
             <div class="footer-brand">
+
 
                 <div class="footer-logo">
 
                     <div class="brand-logo">
 
-                        <img id="footerLogo"
-                             src="assets/hero.png"
-                             alt="Logo">
+                        <img
+                            id="footerLogo"
+                            src="assets/hero.png"
+                            alt="Logo"
+                        >
 
                     </div>
 
+
                     <strong id="footerStoreName">
-                        Yamzz Market
-                    </strong>
+    Yamzz Market
+</strong>
 
-                </div>
-
-
-                <p id="footerDescription">
-                    JASTEB Marketplace terpercaya dengan pelayanan cepat dan aman.
-                </p>
+</div>
 
 
-                <div class="social-links">
+<p id="footerDescription">
 
-                    <a id="socialTiktok"
-                       href="#"
-                       target="_blank"
-                       rel="noopener"
-                       aria-label="TikTok">
+    JASTEB Marketplace terpercaya
+    dengan pelayanan cepat dan aman.
 
-                        <span class="material-symbols-rounded">
-                            music_note
-                        </span>
-
-                    </a>
+</p>
 
 
-                    <a id="socialInstagram"
-                       href="#"
-                       target="_blank"
-                       rel="noopener"
-                       aria-label="Instagram">
+<!-- SOCIAL MEDIA -->
 
-                        <span class="material-symbols-rounded">
-                            photo_camera
-                        </span>
-
-                    </a>
+<div class="social-links">
 
 
-                    <a id="socialYoutube"
-                       href="#"
-                       target="_blank"
-                       rel="noopener"
-                       aria-label="YouTube">
+    <!-- TIKTOK -->
 
-                        <span class="material-symbols-rounded">
-                            smart_display
-                        </span>
+    <a
+        id="socialTiktok"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        aria-label="TikTok"
+    >
 
-                    </a>
+        <i class="fa-brands fa-tiktok"></i>
 
-
-                    <a id="socialTelegram"
-                       href="#"
-                       target="_blank"
-                       rel="noopener"
-                       aria-label="Telegram">
-
-                        <span class="material-symbols-rounded">
-                            send
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
+    </a>
 
 
-<!-- NAVIGASI -->
+
+    <!-- INSTAGRAM -->
+
+    <a
+        id="socialInstagram"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+    >
+
+        <i class="fa-brands fa-instagram"></i>
+
+    </a>
+
+
+
+    <!-- YOUTUBE -->
+
+    <a
+        id="socialYoutube"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        aria-label="YouTube"
+    >
+
+        <i class="fa-brands fa-youtube"></i>
+
+    </a>
+
+
+
+    <!-- TELEGRAM -->
+
+    <a
+        id="socialTelegram"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        aria-label="Telegram"
+    >
+
+        <i class="fa-brands fa-telegram"></i>
+
+    </a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================
+     NAVIGASI
+========================================= -->
+
 <div class="footer-column">
 
-    <h4>Navigasi</h4>
+    <h4>
+        Navigasi
+    </h4>
+
 
     <a href="index.html">
-        <span class="material-symbols-rounded">home</span>
+
+        <i class="fa-solid fa-house"></i>
+
         Home
+
     </a>
 
+
     <a href="produk.html">
-        <span class="material-symbols-rounded">inventory_2</span>
+
+        <i class="fa-solid fa-box"></i>
+
         Produk
+
     </a>
+
 
     <a href="tentang.html">
-        <span class="material-symbols-rounded">info</span>
+
+        <i class="fa-solid fa-circle-info"></i>
+
         Tentang
+
     </a>
 
 </div>
 
 
-<!-- LAYANAN -->
+
+<!-- =========================================
+     LAYANAN
+========================================= -->
+
 <div class="footer-column">
 
-    <h4>Layanan</h4>
+    <h4>
+        Layanan
+    </h4>
+
 
     <a href="produk.html">
-        <span class="material-symbols-rounded">bolt</span>
+
+        <i class="fa-solid fa-bolt"></i>
+
         JASTEB
+
     </a>
 
+
     <a href="produk.html">
-        <span class="material-symbols-rounded">key</span>
+
+        <i class="fa-solid fa-key"></i>
+
         Sewa JASTEB
+
     </a>
 
+
     <a href="produk.html">
-        <span class="material-symbols-rounded">workspace_premium</span>
+
+        <i class="fa-solid fa-crown"></i>
+
         PT JASTEB
+
     </a>
 
 </div>
 
 
-<!-- KONTAK -->
+
+<!-- =========================================
+     KONTAK
+========================================= -->
+
 <div class="footer-column">
 
-    <h4>Kontak</h4>
+    <h4>
+        Kontak
+    </h4>
 
-    <!-- WHATSAPP CS -->
-    <a id="footerWhatsapp"
-       href="#"
-       target="_blank"
-       rel="noopener">
+
+    <!-- WHATSAPP -->
+
+    <a
+        id="footerWhatsapp"
+        href="#"
+        target="_blank"
+        rel="noopener"
+    >
 
         <i class="fa-brands fa-whatsapp"></i>
 
@@ -1005,12 +1341,14 @@
     </a>
 
 
-    <!-- EMAIL CS -->
-    <a id="footerEmail" href="#">
+    <!-- EMAIL -->
 
-        <span class="material-symbols-rounded">
-            mail
-        </span>
+    <a
+        id="footerEmail"
+        href="#"
+    >
+
+        <i class="fa-solid fa-envelope"></i>
 
         Email CS
 
@@ -1022,14 +1360,25 @@
 </div>
 
 
-<!-- FOOTER BOTTOM -->
+
+<!-- =========================================
+     FOOTER BOTTOM
+========================================= -->
+
 <div class="footer-bottom">
 
     <span>
+
         ©
+
         <span id="footerYear"></span>
-        <span id="copyrightName">Yamzz Market</span>
+
+        <span id="copyrightName">
+            Yamzz Market
+        </span>
+
     </span>
+
 
     <span>
         All Rights Reserved.
@@ -1043,14 +1392,25 @@
 </footer>
 
 
-<!-- BOTTOM NAVBAR -->
-<nav class="bottom-navbar" aria-label="Navigasi utama">
 
-    <a href="produk.html" data-page="produk">
+<!-- =========================================
+     BOTTOM NAVBAR
+========================================= -->
 
-        <span class="material-symbols-rounded">
-            inventory_2
-        </span>
+<nav
+    class="bottom-navbar"
+    aria-label="Navigasi utama"
+>
+
+
+    <!-- PRODUK -->
+
+    <a
+        href="produk.html"
+        data-page="produk"
+    >
+
+        <i class="fa-solid fa-box"></i>
 
         <span>
             Produk
@@ -1059,11 +1419,15 @@
     </a>
 
 
-    <a href="index.html" data-page="home">
 
-        <span class="material-symbols-rounded">
-            home
-        </span>
+    <!-- HOME -->
+
+    <a
+        href="index.html"
+        data-page="home"
+    >
+
+        <i class="fa-solid fa-house"></i>
 
         <span>
             Home
@@ -1072,11 +1436,15 @@
     </a>
 
 
-    <a href="tentang.html" data-page="tentang">
 
-        <span class="material-symbols-rounded">
-            info
-        </span>
+    <!-- TENTANG -->
+
+    <a
+        href="tentang.html"
+        data-page="tentang"
+    >
+
+        <i class="fa-solid fa-circle-info"></i>
 
         <span>
             Tentang
@@ -1087,14 +1455,19 @@
 </nav>
 
 
-<!-- TOAST -->
-<div id="toast" class="toast">
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div
+    id="toast"
+    class="toast"
+>
 
     <div class="toast-icon">
 
-        <span class="material-symbols-rounded">
-            check
-        </span>
+        <i class="fa-solid fa-check"></i>
 
     </div>
 
@@ -1114,30 +1487,36 @@
 </div>
 
 
-<!-- JAVASCRIPT -->
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script src="js/index.js"></script>
 
 
 <script>
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
 
-    document
-        .querySelectorAll('.bottom-navbar a')
-        .forEach(a => {
+        document
+            .querySelectorAll('.bottom-navbar a')
+            .forEach(a => {
 
-            a.classList.toggle(
-                'active',
-                a.dataset.page === 'home'
-            );
+                a.classList.toggle(
+                    'active',
+                    a.dataset.page === 'home'
+                );
 
-        });
+            });
 
-});
+    }
+);
 
 </script>
 
 
 </body>
 </html>
-      
