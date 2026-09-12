@@ -404,7 +404,7 @@ function render() {
           <div class="payment-head">
 
             <span class="badge">
-              CASAKU PAYMENT
+              YAMZZ PAYMENT
             </span>
 
             <h1>
@@ -650,7 +650,7 @@ async function createPayment(e) {
 
       throw new Error(
         j.error ||
-        "Gagal membuat pembayaran."
+        "Gagal membuat pembayaran. Karena admin sedang offline"
       );
 
     }
@@ -669,7 +669,7 @@ async function createPayment(e) {
     ) {
 
       throw new Error(
-        "Respons pembayaran Casaku tidak valid."
+        "Admin sedang offline sementara pembayaran tidak bisa."
       );
 
     }
