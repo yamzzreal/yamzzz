@@ -426,11 +426,11 @@ function render() {
 
     <div class="sewa-warning-content">
         <div class="sewa-warning-title">
-            PERINGATAN SEWA JASTEB
+            PEMBERITAHUAN
         </div>
 
         <div class="sewa-warning-text">
-            Harap pastikan data yang kamu masukkan sudah benar.
+            Sebelum melakukan pembayaran harap isi Email dan whatsapp dengan benar.
             Setelah pembayaran berhasil, pesanan akan diproses secara otomatis.
         </div>
     </div>
