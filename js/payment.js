@@ -493,13 +493,13 @@ function render() {
 
 
             <label>
-              WhatsApp (wajib)
+              WhatsApp
 
               <input
                 id="customerWhatsapp"
                 required
                 maxlength="20"
-                placeholder="68xxxxxxxxxx"
+                placeholder="62xxxxxxxxxx"
               >
             </label>
 
@@ -514,6 +514,17 @@ function render() {
                 maxlength="120"
                 placeholder="email@contoh.com"
               >
+            </label>
+
+            <label>
+              Catatan (opsional)
+
+              <textarea
+                id="customerNote"
+                rows="3"
+                maxlength="300"
+                placeholder="Catatan tambahan"
+              ></textarea>
             </label>
 
             <button
