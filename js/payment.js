@@ -516,6 +516,17 @@ function render() {
               >
             </label>
 
+            <label>
+              Catatan (opsional)
+
+              <textarea
+                id="customerNote"
+                rows="3"
+                maxlength="300"
+                placeholder="Catatan tambahan"
+              ></textarea>
+            </label>
+
             <button
               class="payment-submit"
               type="submit"
