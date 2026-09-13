@@ -493,19 +493,19 @@ function render() {
 
 
             <label>
-              WhatsApp
+              WhatsApp (wajib)
 
               <input
                 id="customerWhatsapp"
                 required
                 maxlength="20"
-                placeholder="08xxxxxxxxxx"
+                placeholder="68xxxxxxxxxx"
               >
             </label>
 
 
             <label>
-              Email
+              Email (wajib)
 
               <input
                 id="customerEmail"
@@ -516,19 +516,6 @@ function render() {
               >
             </label>
 
-
-            <label>
-              Catatan (opsional)
-
-              <textarea
-                id="customerNote"
-                rows="3"
-                maxlength="300"
-                placeholder="Catatan tambahan"
-              ></textarea>
-            </label>
-
-
             <button
               class="payment-submit"
               type="submit"
@@ -536,7 +523,7 @@ function render() {
 
               <i class="fa-solid fa-qrcode"></i>
 
-              Buat Pembayaran QRIS
+              Lanjutkan pembayaran
 
             </button>
 
@@ -554,7 +541,7 @@ function render() {
           <div class="payment-head">
 
             <span class="badge">
-              QRIS DINAMIS
+              QRIS YAMZZ MARKET
             </span>
 
             <h2>
