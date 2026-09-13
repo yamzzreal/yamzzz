@@ -7,6 +7,12 @@ const {
   clean
 } = require('./_common');
 
+/*
+ * ==============================
+ * HELPER
+ * ==============================
+ */
+
 function positiveNumber(...values) {
   for (const value of values) {
     const n = Number(value);
@@ -17,6 +23,27 @@ function positiveNumber(...values) {
   }
 
   return 0;
+}
+
+/**
+ * Biaya admin acak berdasarkan harga produk.
+ *
+ * Di bawah Rp10.000:
+ * Rp10 - Rp90, kelipatan Rp10.
+ *
+ * Rp10.000 atau lebih:
+ * Rp100 - Rp900, kelipatan Rp100.
+ */
+function randomAdminFee(baseAmount) {
+  if (baseAmount < 10000) {
+    return (
+      Math.floor(Math.random() * 9) + 1
+    ) * 10;
+  }
+
+  return (
+    Math.floor(Math.random() * 9) + 1
+  ) * 100;
 }
 
 /**
@@ -42,7 +69,12 @@ function findValueDeep(input, keys, maxDepth = 6, depth = 0) {
 
   if (Array.isArray(input)) {
     for (const item of input) {
-      const found = findValueDeep(item, keys, maxDepth, depth + 1);
+      const found = findValueDeep(
+        item,
+        keys,
+        maxDepth,
+        depth + 1
+      );
 
       if (found !== undefined) {
         return found;
@@ -121,6 +153,12 @@ function getExpiredAt(payload) {
   ).toISOString();
 }
 
+/*
+ * ==============================
+ * MAIN HANDLER
+ * ==============================
+ */
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({
@@ -170,10 +208,15 @@ module.exports = async (req, res) => {
     const db = await jsonbin();
 
     if (db.site?.maintenance === true) {
-      return res.status(503).json({ error: 'Website sedang maintenance.' });
+      return res.status(503).json({
+        error: 'Website sedang maintenance.'
+      });
     }
+
     if (db.site?.storeOffline === true) {
-      return res.status(503).json({ error: 'Store sedang offline.' });
+      return res.status(503).json({
+        error: 'Store sedang offline.'
+      });
     }
 
     const products = Array.isArray(db.products)
@@ -190,13 +233,33 @@ module.exports = async (req, res) => {
       });
     }
 
-    const currentStock = Number(product.stock ?? product.stok ?? product.quantity ?? 0);
+    /*
+     * ==============================
+     * CEK STOK
+     * ==============================
+     */
 
-    if (!Number.isFinite(currentStock) || currentStock <= 0) {
+    const currentStock = Number(
+      product.stock ??
+      product.stok ??
+      product.quantity ??
+      0
+    );
+
+    if (
+      !Number.isFinite(currentStock) ||
+      currentStock <= 0
+    ) {
       return res.status(409).json({
         error: 'Stok produk habis.'
       });
     }
+
+    /*
+     * ==============================
+     * HARGA PRODUK
+     * ==============================
+     */
 
     const baseAmount = Number(
       product.price
@@ -210,6 +273,28 @@ module.exports = async (req, res) => {
         error: 'Harga produk tidak valid.'
       });
     }
+
+    /*
+     * ==============================
+     * BIAYA ADMIN ACAK
+     * ==============================
+     */
+
+    const adminFee = randomAdminFee(
+      baseAmount
+    );
+
+    const totalAmount =
+      baseAmount + adminFee;
+
+    console.log(
+      'PAYMENT CALCULATION',
+      {
+        baseAmount,
+        adminFee,
+        totalAmount
+      }
+    );
 
     /*
      * ==============================
@@ -244,9 +329,11 @@ module.exports = async (req, res) => {
     const gatewayPayload = {
       qr_id: QRIS_ID,
 
-      amount: baseAmount,
+      // Harga produk + biaya admin
+      amount: totalAmount,
 
-      useUniqueCode: true,
+      // Dimatikan agar tidak ada kode unik tambahan
+      useUniqueCode: false,
 
       /*
        * Untuk testing kita gunakan DANA
@@ -313,6 +400,7 @@ module.exports = async (req, res) => {
       return res.status(502).json({
         error:
           'Casaku mengembalikan response bukan JSON.',
+
         httpStatus:
           gatewayResponse.status
       });
@@ -407,6 +495,7 @@ module.exports = async (req, res) => {
         'CASAKU INCOMPLETE RESPONSE',
         {
           transactionId,
+
           hasTransactionId:
             Boolean(transactionId),
 
@@ -487,6 +576,18 @@ module.exports = async (req, res) => {
       basePrice:
         baseAmount,
 
+      /*
+       * Biaya admin acak.
+       */
+      adminFee:
+        adminFee,
+
+      /*
+       * Total pembayaran.
+       */
+      totalAmount:
+        gatewayAmount,
+
       name:
         customer.name,
 
@@ -553,6 +654,11 @@ module.exports = async (req, res) => {
         gatewayAmount,
 
       baseAmount,
+
+      adminFee,
+
+      totalAmount:
+        gatewayAmount,
 
       qrString,
 
