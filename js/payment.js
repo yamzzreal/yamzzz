@@ -493,15 +493,20 @@ function render() {
 
 
             <label>
-              WhatsApp (wajib)
+  WhatsApp (wajib)
 
-              <input
-                id="customerWhatsapp"
-                required
-                maxlength="20"
-                placeholder="68xxxxxxxxxx"
-              >
-            </label>
+  <input
+    id="customerWhatsapp"
+    name="whatsapp"
+    type="tel"
+    required
+    maxlength="15"
+    pattern="62[0-9]{8,13}"
+    inputmode="numeric"
+    placeholder="628xxxxxxxxxx"
+    title="Nomor WhatsApp harus diawali 62 dan berisi 10-15 digit."
+  >
+</label>
 
 
             <label>
