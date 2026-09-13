@@ -132,7 +132,30 @@
 
 </nav>
 
+<script src="js/index.js"></script>
 
+
+<script>
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+        document
+            .querySelectorAll('.bottom-navbar a')
+            .forEach(a => {
+
+                a.classList.toggle(
+                    'active',
+                    a.dataset.page === 'rating'
+                );
+
+            });
+
+    }
+);
+
+</script>
   
   <script>
     const API = '/api/casaku/get-ratings';
