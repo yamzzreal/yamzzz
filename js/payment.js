@@ -621,7 +621,7 @@ function render() {
   <input
     id="customerWhatsapp"
     name="whatsapp"
-    type="tel"
+    type="number"
     required
     maxlength="15"
     pattern="62[0-9]{8,13}"
