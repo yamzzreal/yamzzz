@@ -417,10 +417,24 @@ function render() {
               pembayaran terverifikasi.
             </p>
 
-            ${DB.site?.notification ? `<div class="payment-note" style="margin-top:12px"><i class="fa-solid fa-bullhorn"></i><span>${esc(DB.site.notification)}</span></div>` : ""}
-
           </div>
 
+<div class="sewa-warning">
+    <div class="sewa-warning-icon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+
+    <div class="sewa-warning-content">
+        <div class="sewa-warning-title">
+            PERINGATAN SEWA JASTEB
+        </div>
+
+        <div class="sewa-warning-text">
+            Harap pastikan data yang kamu masukkan sudah benar.
+            Setelah pembayaran berhasil, pesanan akan diproses secara otomatis.
+        </div>
+    </div>
+</div>
 
           <!-- SELECTED PRODUCT -->
           <div class="selected-product">
