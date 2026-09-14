@@ -1370,7 +1370,7 @@ function showPaid(
 
       <a class="yamzz-popup-btn primary" href="${esc(deliveryLink)}" target="_blank" rel="noopener noreferrer" style="display:flex;text-decoration:none;justify-content:center;align-items:center;gap:8px;">
         <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        Buka Link Produk
+        Silahkan ambil pesanan anda
       </a>
       ` : `
       <div class="yamzz-admin-process">
@@ -1378,7 +1378,7 @@ function showPaid(
         <br>
         <b>Admin akan memproses pesanan Anda.</b>
         <br>
-        Harap tunggu sampai proses pesanan selesai. Terima kasih telah bertransaksi di Yamzz Market.
+        Pembayaran berhasil admin akan proses pesanan anda. Terima kasih telah bertransaksi di Yamzz Market.
       </div>
       `}
 
