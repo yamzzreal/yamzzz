@@ -9,16 +9,281 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/index.css">
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:22px;font-family:Inter,system-ui,sans-serif;color:#f2f7ff;background:linear-gradient(145deg,#06111d,#0a1b2b)}
-.wrap{width:min(820px,100%);margin:auto}.back{display:inline-flex;gap:8px;color:#9eb8d0;text-decoration:none;font-size:12px;margin:10px 0 25px}
-header{text-align:center;margin:10px 0 25px}header h1{margin:0 0 8px;font-size:28px}header p{margin:0;color:#91a8bd;font-size:13px}
-.summary,.testimonial-card{border:1px solid rgba(100,165,225,.14);border-radius:20px;background:linear-gradient(145deg,#15395d,#0b2034);box-shadow:0 18px 55px rgba(0,0,0,.18)}
-.summary{text-align:center;padding:22px;margin-bottom:20px}.total{color:#91a8bd;font-size:12px}
-#testimonialList{display:grid;gap:14px}.testimonial-card{padding:19px;background:rgba(18,42,65,.86)}
-.top{display:flex;align-items:center;gap:12px}.avatar{width:44px;height:44px;border-radius:14px;overflow:hidden;flex:0 0 44px;background:#102b45;display:grid;place-items:center}.avatar img{width:100%;height:100%;object-fit:cover}.avatar i{color:#75baff}.name{font-size:14px;font-weight:800}.date{margin-top:3px;color:#607b92;font-size:10px}
-.message{margin:14px 0 10px;color:#d5e2ee;font-size:13px;line-height:1.7;white-space:pre-wrap}.proof{width:100%;max-height:420px;object-fit:contain;border-radius:14px;margin-top:8px;background:#07111f;border:1px solid rgba(255,255,255,.06)}
-.state{text-align:center;padding:35px;color:#91a8bd;font-size:13px}.error{color:#ff9b9b}
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  padding:22px;
+  font-family:Inter,system-ui,sans-serif;
+  color:#f2f7ff;
+  background:linear-gradient(145deg,#06111d,#0a1b2b);
+}
+
+.wrap{
+  width:min(820px,100%);
+  margin:auto;
+}
+
+.back{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#9eb8d0;
+  text-decoration:none;
+  font-size:12px;
+  margin:10px 0 25px;
+}
+
+header{
+  text-align:center;
+  margin:10px 0 25px;
+}
+
+header h1{
+  margin:0 0 8px;
+  font-size:28px;
+}
+
+header p{
+  margin:0;
+  color:#91a8bd;
+  font-size:13px;
+}
+
+/* SUMMARY */
+.summary,
+.testimonial-card{
+  border:1px solid rgba(100,165,225,.14);
+  border-radius:20px;
+  background:linear-gradient(145deg,#15395d,#0b2034);
+  box-shadow:0 18px 55px rgba(0,0,0,.18);
+}
+
+.summary{
+  text-align:center;
+  padding:22px;
+  margin-bottom:20px;
+}
+
+.total{
+  color:#91a8bd;
+  font-size:12px;
+}
+
+/* TESTIMONI GRID */
+#testimonialList{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+
+/* CARD */
+.testimonial-card{
+  padding:14px;
+  background:rgba(18,42,65,.86);
+  min-width:0;
+  overflow:hidden;
+}
+
+/* TOP */
+.top{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+}
+
+.avatar{
+  width:38px;
+  height:38px;
+  border-radius:11px;
+  overflow:hidden;
+  flex:0 0 38px;
+  background:#102b45;
+  display:grid;
+  place-items:center;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.avatar i{
+  color:#75baff;
+  font-size:16px;
+}
+
+.name{
+  font-size:12px;
+  font-weight:800;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.date{
+  margin-top:3px;
+  color:#607b92;
+  font-size:9px;
+}
+
+/* MESSAGE */
+.message{
+  margin:10px 0 8px;
+  color:#d5e2ee;
+  font-size:11px;
+  line-height:1.55;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+/* IMAGE TESTIMONI */
+.proof{
+  display:block;
+  width:100%;
+  max-height:220px;
+  object-fit:contain;
+  border-radius:10px;
+  margin-top:8px;
+  background:#07111f;
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* STATE */
+.state{
+  grid-column:1 / -1;
+  text-align:center;
+  padding:35px;
+  color:#91a8bd;
+  font-size:13px;
+}
+
+.error{
+  color:#ff9b9b;
+}
+
+/* TABLET */
+@media(max-width:500px){
+  body{
+    padding:14px;
+  }
+
+  .wrap{
+    width:100%;
+  }
+
+  header{
+    margin:5px 0 18px;
+  }
+
+  header h1{
+    font-size:23px;
+  }
+
+  header p{
+    font-size:11px;
+  }
+
+  .summary{
+    padding:16px;
+    margin-bottom:14px;
+    border-radius:16px;
+  }
+
+  #testimonialList{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+
+  .testimonial-card{
+    padding:11px;
+    border-radius:15px;
+  }
+
+  .avatar{
+    width:32px;
+    height:32px;
+    flex-basis:32px;
+    border-radius:9px;
+  }
+
+  .avatar i{
+    font-size:14px;
+  }
+
+  .name{
+    font-size:11px;
+  }
+
+  .date{
+    font-size:8px;
+  }
+
+  .message{
+    font-size:10px;
+    line-height:1.5;
+    margin:8px 0 6px;
+  }
+
+  .proof{
+    max-height:170px;
+    border-radius:8px;
+  }
+}
+
+/* HP KECIL */
+@media(max-width:360px){
+  body{
+    padding:10px;
+  }
+
+  #testimonialList{
+    gap:6px;
+  }
+
+  .testimonial-card{
+    padding:9px;
+    border-radius:13px;
+  }
+
+  .avatar{
+    width:29px;
+    height:29px;
+    flex-basis:29px;
+  }
+
+  .top{
+    gap:6px;
+  }
+
+  .name{
+    font-size:10px;
+  }
+
+  .date{
+    font-size:7px;
+  }
+
+  .message{
+    font-size:9px;
+  }
+
+  .proof{
+    max-height:140px;
+  }
+}
 </style>
+
+Yang penting: CSS ini tidak akan mengubah menjadi 1 kolom di HP. Jadi dari layar besar sampai HP kecil tetap:
+
+2 card × 1 baris → 2 card × 1 baris → dst.
+
+Selain itu, ".state{grid-column:1 / -1}" membuat tulisan seperti "Belum ada testimoni" tetap berada di tengah dan memenuhi lebar kedua kolom.
 </head>
 <body>
   <!-- =========================================
