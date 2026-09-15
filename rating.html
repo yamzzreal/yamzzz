@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>Testimoni Pelanggan • Yamzz Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/index.css">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:22px;font-family:Inter,system-ui,sans-serif;color:#f2f7ff;background:linear-gradient(145deg,#06111d,#0a1b2b)}
+.wrap{width:min(820px,100%);margin:auto}.back{display:inline-flex;gap:8px;color:#9eb8d0;text-decoration:none;font-size:12px;margin:10px 0 25px}
+header{text-align:center;margin:10px 0 25px}header h1{margin:0 0 8px;font-size:28px}header p{margin:0;color:#91a8bd;font-size:13px}
+.summary,.testimonial-card{border:1px solid rgba(100,165,225,.14);border-radius:20px;background:linear-gradient(145deg,#15395d,#0b2034);box-shadow:0 18px 55px rgba(0,0,0,.18)}
+.summary{text-align:center;padding:22px;margin-bottom:20px}.total{color:#91a8bd;font-size:12px}
+#testimonialList{display:grid;gap:14px}.testimonial-card{padding:19px;background:rgba(18,42,65,.86)}
+.top{display:flex;align-items:center;gap:12px}.avatar{width:44px;height:44px;border-radius:14px;overflow:hidden;flex:0 0 44px;background:#102b45;display:grid;place-items:center}.avatar img{width:100%;height:100%;object-fit:cover}.avatar i{color:#75baff}.name{font-size:14px;font-weight:800}.date{margin-top:3px;color:#607b92;font-size:10px}
+.message{margin:14px 0 10px;color:#d5e2ee;font-size:13px;line-height:1.7;white-space:pre-wrap}.proof{width:100%;max-height:420px;object-fit:contain;border-radius:14px;margin-top:8px;background:#07111f;border:1px solid rgba(255,255,255,.06)}
+.state{text-align:center;padding:35px;color:#91a8bd;font-size:13px}.error{color:#ff9b9b}
+</style>
+</head>
+<body>
+  <!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- BRAND -->
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+
+                <img
+                    id="navLogo"
+                    src="assets/hero.png"
+                    alt="Logo"
+                >
+
+            </div>
+
+
+            <div class="brand-info">
+
+                <strong id="navStoreName">
+                    Yamzz Market
+                </strong>
+
+                <span>
+                    JASTEB STORE
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions">
+
+            <!-- WHATSAPP -->
+
+            <a
+                id="navWhatsapp"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="nav-wa"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                    WhatsApp
+                </span>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+
+<!-- =========================================
+     LIVE PAID TRANSACTIONS
+========================================= -->
+
+<section class="paid-transactions-section" aria-label="Transaksi berhasil terbaru">
+    <div class="container">
+        <div class="paid-live-card" id="paidTransactionsCard" hidden>
+            <div class="paid-live-head">
+                <div class="paid-live-title">
+                    <span class="paid-live-dot"></span>
+                    <div>
+                        <strong>Transaksi Terbaru</strong>
+                        <span>Aktivitas transaksi terbaru</span>
+                    </div>
+                </div>
+                <span class="paid-live-status"><i class="fa-solid fa-bolt"></i> LIVE</span>
+            </div>
+            <div class="paid-live-track" id="paidTransactionsTrack" aria-live="polite">
+                <div class="paid-live-item paid-live-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Memuat transaksi...
+                </div>
+            </div>
+        </div>
+<main class="wrap">
+<header><h1><i class="fa-solid fa-comments"></i> Testimoni Pelanggan</h1><p>Pengalaman pelanggan Yamzz Market</p></header>
+<section class="summary"><div id="total" class="total">Memuat testimoni...</div></section>
+<section id="testimonialList"><div class="state">Memuat testimoni...</div></section>
+</main>
+<nav class="bottom-navbar" aria-label="Navigasi utama">
+<a href="produk.html" data-page="produk"><i class="fa-solid fa-box"></i><span>Produk</span></a>
+<a href="index.html" data-page="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+<a href="cek-transaksi.html" data-page="trx"><i class="fa-solid fa-magnifying-glass"></i><span>Pesanan</span></a>
+<a href="rating.html" data-page="rating"><i class="fa-solid fa-comments"></i><span>Testimoni</span></a>
+<a href="tentang.html" data-page="tentang"><i class="fa-solid fa-circle-info"></i><span>Tentang</span></a>
+</nav>
+
+  <script>
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+        document
+            .querySelectorAll('.bottom-navbar a')
+            .forEach(a => {
+
+                a.classList.toggle(
+                    'active',
+                    a.dataset.page === 'rating'
+                );
+
+            });
+
+    }
+);
+
+  </script>
+<script>
+const esc=v=>String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+const fmtDate=v=>{if(!v)return "";try{return new Intl.DateTimeFormat("id-ID",{dateStyle:"medium"}).format(new Date(v))}catch{return ""}};
+async function loadTestimonials(){
+ const list=document.getElementById("testimonialList"),total=document.getElementById("total");
+ try{
+  const r=await fetch("/api/casaku/get-testimonials",{cache:"no-store"}),d=await r.json();
+  if(!r.ok)throw new Error(d.error||"Gagal memuat testimoni.");
+  const items=Array.isArray(d.testimonials)?d.testimonials:[];
+  total.textContent=items.length?`${items.length} testimoni pelanggan`:"Belum ada testimoni";
+  if(!items.length){list.innerHTML='<div class="state">Belum ada testimoni pelanggan.</div>';return}
+  list.innerHTML=items.map(t=>`<article class="testimonial-card">
+   <div class="top"><div class="avatar">${t.image?`<img src="${esc(t.image)}" alt="">`:`<i class="fa-solid fa-user"></i>`}</div><div><div class="name">${esc(t.name||"Pelanggan")}</div><div class="date">${esc(fmtDate(t.createdAt))}</div></div></div>
+   <div class="message">${esc(t.message||"")}</div>
+   ${t.image?`<img class="proof" src="${esc(t.image)}" alt="Gambar testimoni">`:""}
+  </article>`).join("");
+ }catch(e){console.error(e);list.innerHTML=`<div class="state error">${esc(e.message||"Gagal memuat testimoni.")}</div>`}
+}
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".bottom-navbar a").forEach(a=>{if(a.dataset.page==="rating")a.dataset.page="testimoni"});loadTestimonials()});
+</script>
+</body>
+</html>
