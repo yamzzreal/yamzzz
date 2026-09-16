@@ -92,7 +92,7 @@
     overlay.innerHTML = `
       <div class="yamzz-pwa-card" role="dialog" aria-modal="true" aria-labelledby="yamzzPwaTitle">
         <div class="yamzz-pwa-head">
-          <img class="yamzz-pwa-logo" src="/icons/icon-192.png" alt="Yamzz Market">
+          <img class="yamzz-pwa-logo" src="/assets/hero.png" alt="Jasteb Yamzz Market">
           <div>
             <h2 class="yamzz-pwa-title" id="yamzzPwaTitle">Install Yamzz Market</h2>
             <div class="yamzz-pwa-sub">Aplikasi web resmi Yamzz Market</div>
