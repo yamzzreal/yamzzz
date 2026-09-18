@@ -6,11 +6,11 @@
 "use strict";
 
 const CONFIG = {
-  HOME: "index.html",
+  HOME: "index",
   CREATE_API: "/api/casaku/create",
   STATUS_API: "/api/casaku/status",
   SUBMIT_RATING_API: "/api/casaku/submit-rating",
-  CHECK_TRANSACTION: "cek-transaksi.html",
+  CHECK_TRANSACTION: "cek-transaksi",
   BIN_ID: "6a97221eda38895dfe2c57b6",
   ACCESS_KEY: "$2a$10$XkuvGHYPmOrDazsHVKoqU.0bp.DPZQuLg8.vDg7RYec1WaXBZiSE6",
   API_URL: "https://api.jsonbin.io/v3/b"
@@ -1328,7 +1328,7 @@ function showPaid(
           </span>
 
           <strong>
-            ${esc(orderId)}
+            ${esc(orderId)} Salin ID pesanan untuk cek pesanan anda
           </strong>
 
         </div>
