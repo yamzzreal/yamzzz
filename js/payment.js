@@ -6,7 +6,7 @@
 "use strict";
 
 const CONFIG = {
-  HOME: "index",
+  HOME: "/",
   CREATE_API: "/api/casaku/create",
   STATUS_API: "/api/casaku/status",
   SUBMIT_RATING_API: "/api/casaku/submit-rating",
