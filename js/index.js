@@ -21,7 +21,7 @@ const CONFIG = {
     API_URL: "https://api.jsonbin.io/v3/b",
 
     // Halaman pembayaran
-    PAYMENT_PAGE: "payment.html",
+    PAYMENT_PAGE: "payment",
 
     // Nama default jika database gagal
     DEFAULT_NAME: "Yamzz Market"
