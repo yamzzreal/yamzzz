@@ -3,5 +3,27 @@
     "api/**/*.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/produk",
+      "destination": "/produk.html"
+    },
+    {
+      "source": "/cek-pesanan",
+      "destination": "/cek-transaksi.html"
+    },
+    {
+      "source": "/testimoni",
+      "destination": "/rating.html"
+    },
+    {
+      "source": "/tentang",
+      "destination": "/tentang.html"
+    }
+  ]
 }
