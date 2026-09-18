@@ -24,6 +24,10 @@
     {
       "source": "/tentang",
       "destination": "/tentang.html"
+    },
+    {
+      "source": "/payment",
+      "destination": "/payment.html"
     }
   ]
 }
