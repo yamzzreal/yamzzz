@@ -14,11 +14,11 @@
       "destination": "/produk.html"
     },
     {
-      "source": "/cek-pesanan",
+      "source": "/cek-transaksi",
       "destination": "/cek-transaksi.html"
     },
     {
-      "source": "/testimoni",
+      "source": "/rating",
       "destination": "/rating.html"
     },
     {
